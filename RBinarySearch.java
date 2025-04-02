@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class RBinarySearch
  {
@@ -31,13 +32,15 @@ public class RBinarySearch
 
         int[] arr = new int[n];
 
-        System.out.println("Enter " + n + " elements of the array (sorted in ascending order):");
+        System.out.println("Enter " + n + " elements of the array :");
         for (int i = 0; i < n; i++)
         {
             arr[i] = scanner.nextInt();
         }
 
-       
+        Arrays.sort(arr);
+	       System.out.println("sorted array:" + Arrays.toString(arr));
+      
         System.out.print("Enter the element to search for: ");
         int target = scanner.nextInt();
 
