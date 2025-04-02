@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Arrays;
+
 public class LinearSearch 
 {
     public static int LinearSearch(int[] arr, int target) 
@@ -22,6 +24,10 @@ public class LinearSearch
         {
             arr[i] = scanner.nextInt();
         }
+
+        Arrays.sort(arr);
+	    System.out.println("sorted array:" + Arrays.toString(arr));
+        
         System.out.print("Enter the element to search for: ");
         int target = scanner.nextInt();       
         int result = LinearSearch(arr, target);
