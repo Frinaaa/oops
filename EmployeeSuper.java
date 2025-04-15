@@ -1,9 +1,9 @@
 import java.util.Scanner;
-class Employer
+class employer
 {
  int Empid,Salary;
  String Name,Address;
- Employer(int eid ,int sal,String name,String addr)
+ employer(int eid,int sal,String name,String addr)
  {
  Empid=eid;
  Salary=sal;
@@ -22,12 +22,12 @@ class Teacher extends Employer
   }
   void display() 
   {
-    System.out.println("employeeid:" +Empid);
-    System.out.println("employee name:" +Name);
-    System.out.println("salary:" +Salary);
-    System.out.println("address:" +Address);
-    System.out.println("department:" +department);
-    System.out.println("Subjects taught:" +Subjects_taught);
+    System.out.println("\nemployeeid:"+Empid);
+    System.out.println("\nemployee name:"+Name);
+    System.out.println("\nsalary:"+Salary);
+    System.out.println("\naddress:"+Address);
+    System.out.println("\ndepartment:"+department);
+    System.out.println("\nSubjects taught:"+Subjects_taught);
     }
  }
  class EmployeeSuper
@@ -53,12 +53,11 @@ class Teacher extends Employer
       System.out.println("\n enter the department:");
       dept=sc.next();
       System.out.println("\n enter the subject taught:");
-      Subj=sc.nextLine();
-      sc.nextLine();
+      Subj=sc.next();
       teacher[i]=new Teacher(eid,Salary,name,address,dept,Subj);
      }
      System.out.println("\n Details of teachers");
-     System.out.println("\n_____________________");
+     System.out.println("_____________________----");
      for(i=0;i<n;i++)
      {
         teacher[i].display();
